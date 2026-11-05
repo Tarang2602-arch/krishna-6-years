@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cut">
+<title>Krishna, Date Tomorrow?</title>
+<meta name="description" content="Six years with you. One very important question.">
+<meta property="og:title" content="Krishna, I have a question 💌">
+<meta property="og:description" content="Six years. One date. Sushi may be involved.">
+<meta property="og:image" content="photos/us/p6.jpg">
+<meta name="theme-color" content="#fff4ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Caveat:wght@500;700&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#fff4ee; --paper:#fffdfb; --ink:#2b1a1f; --muted:#7b5f66;
+  --rose:#e8456b; --rose-d:#c22d52; --blush:#ffd9e1; --peach:#ffe3d1;
+  --leaf:#2f8f6b; --wa:#25d366; --line:#f1d6d6;
+  --shadow:0 10px 30px rgba(120,40,60,.12);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.floaty{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.floaty span{position:absolute;bottom:-60px;font-size:26px;opacity:.55;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg)}}
+section{position:relative;z-index:1}
+
+/* HERO */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:40px 0 60px}
+.badge{display:inline-flex;gap:8px;align-items:center;background:var(--paper);border:1.5px dashed var(--rose);color:var(--rose-d);padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px;letter-spacing:.02em}
+.hero-pics{display:flex;justify-content:center;margin:26px 0 18px}
+.hero-pics img{width:118px;height:150px;object-fit:cover;border:6px solid #fff;border-bottom-width:22px;border-radius:4px;box-shadow:var(--shadow)}
+.hero-pics img:nth-child(1){transform:rotate(-8deg) translateX(18px)}
+.hero-pics img:nth-child(2){transform:rotate(3deg) translateY(-10px);z-index:2;position:relative}
+.hero-pics img:nth-child(3){transform:rotate(9deg) translateX(-18px)}
+h1{font-family:Fraunces,serif;font-weight:800;font-size:clamp(38px,8vw,76px);line-height:1.02;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--rose)}
+.sub{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:560px;margin:16px auto 0}
+.q{font-family:Caveat,cursive;font-size:clamp(30px,5vw,42px);font-weight:700;margin-top:28px;color:var(--rose-d)}
+.choices{position:relative;display:flex;gap:16px;justify-content:center;align-items:center;margin-top:18px;min-height:90px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:99px;font-weight:800;font-size:18px;transition:transform .2s, box-shadow .2s, background .2s}
+.btn-yes{background:var(--rose);color:#fff;box-shadow:0 8px 0 var(--rose-d),0 14px 26px rgba(232,69,107,.35)}
+.btn-yes:hover{transform:translateY(-2px)}
+.btn-yes:active{transform:translateY(4px);box-shadow:0 3px 0 var(--rose-d)}
+.btn-no{background:var(--paper);border:2px solid var(--line);color:var(--muted);font-size:16px;padding:12px 22px}
+.btn-no.runaway{position:fixed;z-index:50;transition:left .25s ease, top .25s ease}
+.nope{font-family:Caveat,cursive;font-size:24px;color:var(--muted);min-height:34px;margin-top:6px}
+.scroll-hint{margin-top:26px;font-size:14px;color:var(--muted)}
+
+/* LETTER */
+.letter-sec{padding:40px 0 70px}
+.letter{max-width:680px;margin:0 auto;background:var(--paper);border-radius:6px;box-shadow:var(--shadow);padding:44px 34px 40px;position:relative;
+  background-image:repeating-linear-gradient(transparent 0 37px,#f6e3e3 37px 38px);background-position:0 92px}
+.letter::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-2deg);background:rgba(255,190,205,.75);border-radius:2px}
+.letter h2{font-family:Caveat,cursive;font-size:44px;color:var(--rose-d);line-height:1;margin-bottom:18px}
+.letter p{font-family:Caveat,cursive;font-size:clamp(23px,3.4vw,27px);line-height:38px;margin-bottom:18px;color:#3a2228}
+.letter .big{font-weight:700;color:var(--rose-d)}
+.letter .sign{text-align:right;margin:8px 0 0}
+.stamp{position:absolute;right:20px;top:20px;width:66px;height:66px;border-radius:50%;border:2px dashed var(--rose);display:grid;place-items:center;text-align:center;font-weight:800;font-size:11px;line-height:1.1;color:var(--rose);transform:rotate(12deg)}
+.stamp b{font-family:Fraunces,serif;font-size:24px;display:block}
+
+/* GALLERY */
+.sec-head{text-align:center;margin-bottom:28px}
+.kicker{font-family:Caveat,cursive;font-size:26px;color:var(--rose)}
+h2.t{font-family:Fraunces,serif;font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1.08;letter-spacing:-.01em}
+.sec-head p{color:var(--muted);margin-top:8px}
+.gallery-sec{padding:30px 0 80px}
+.gallery{columns:3 260px;column-gap:22px}
+.pol{break-inside:avoid;background:#fff;padding:10px 10px 0;margin-bottom:24px;border-radius:4px;box-shadow:var(--shadow);transition:transform .25s}
+.pol:nth-child(odd){transform:rotate(-1.6deg)}
+.pol:nth-child(even){transform:rotate(1.4deg)}
+.pol:hover{transform:rotate(0) scale(1.03)}
+.pol img{width:100%;border-radius:2px}
+.pol figcaption{font-family:Caveat,cursive;font-size:24px;text-align:center;padding:8px 6px 12px;color:#4a2c33}
+
+/* PICKER */
+.picker{display:none;padding:20px 0 90px}
+.picker.show{display:block;animation:fadeUp .6s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.step{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--rose);color:#fff;font-weight:800;margin-right:8px;vertical-align:middle;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{position:relative;text-align:left;background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:3px solid transparent;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px)}
+.card.sel{border-color:var(--rose);transform:translateY(-4px)}
+.card.sel::after{content:"✓ Her pick";position:absolute;top:12px;right:12px;background:var(--rose);color:#fff;font-weight:800;font-size:13px;padding:5px 11px;border-radius:99px}
+.ph{position:relative;aspect-ratio:4/3;background:var(--peach);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:opacity .4s}
+.ph img+img{position:absolute;inset:0;opacity:0}
+.card:hover .ph img+img{opacity:1}
+.ph.art{display:grid;place-items:center;font-size:74px;background:linear-gradient(135deg,#ffe0e8,#ffeedd)}
+.ph.art small{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:20px;color:var(--muted)}
+.fav{position:absolute;left:12px;top:12px;background:#fff;color:var(--rose-d);font-weight:800;font-size:12px;padding:5px 10px;border-radius:99px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.cbody{padding:14px 16px 18px}
+.cbody h3{font-family:Fraunces,serif;font-size:21px;line-height:1.15}
+.meta{font-size:14px;color:var(--muted);margin-top:3px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags span{font-size:12px;font-weight:700;background:var(--blush);color:var(--rose-d);padding:4px 9px;border-radius:99px}
+.note{font-family:Caveat,cursive;font-size:21px;margin-top:8px;color:#5b3a42}
+
+.times-wrap{margin-top:60px}
+.times{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.chip{background:var(--paper);border:2.5px solid var(--line);border-radius:16px;padding:12px 18px;font-weight:700;min-width:140px;text-align:center;transition:all .2s}
+.chip small{display:block;font-weight:500;color:var(--muted);font-size:13px}
+.chip.sel{border-color:var(--rose);background:var(--rose);color:#fff}
+.chip.sel small{color:#ffe5ec}
+.custom{display:flex;gap:10px;justify-content:center;align-items:center;margin-top:16px;flex-wrap:wrap;color:var(--muted)}
+input[type=time],textarea{font:inherit;border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:10px 12px;color:var(--ink)}
+textarea{width:100%;max-width:560px;display:block;margin:0 auto;min-height:90px;resize:vertical}
+input:focus,textarea:focus{outline:3px solid var(--blush);border-color:var(--rose)}
+
+.ticket-wrap{margin-top:60px}
+.ticket{max-width:560px;margin:0 auto;background:var(--paper);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.ticket .top{background:var(--rose);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}
+.ticket .top b{font-family:Fraunces,serif;font-size:22px}
+.ticket .rows{padding:18px 22px;display:grid;gap:12px;border-top:2px dashed var(--line)}
+.row{display:flex;justify-content:space-between;gap:16px}
+.row span:first-child{color:var(--muted);font-weight:600}
+.row span:last-child{font-weight:800;text-align:right}
+.send{text-align:center;margin-top:26px}
+.btn-wa{background:var(--wa);color:#0b3d22;box-shadow:0 8px 0 #1a9c4b,0 14px 26px rgba(37,211,102,.35);font-size:19px}
+.btn-wa:disabled{filter:grayscale(1);opacity:.5;cursor:not-allowed;box-shadow:none}
+.hint{color:var(--muted);font-size:14px;margin-top:14px}
+footer{text-align:center;padding:30px 0 50px;font-family:Caveat,cursive;font-size:24px;color:var(--muted);position:relative;z-index:1}
+
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:60}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:99px;font-weight:700;z-index:70;transition:transform .35s;max-width:calc(100% - 32px);text-align:center}
+.toast.on{transform:translateX(-50%) translateY(0)}
+@media (max-width:560px){
+  .hero-pics img{width:92px;height:118px}
+  .letter{padding:40px 20px 30px}
+  .stamp{display:none}
+  .gallery{columns:2 150px;column-gap:14px}
+  .pol figcaption{font-size:19px}
+  .chip{min-width:calc(50% - 6px)}
+}
+@media (prefers-reduced-motion:reduce){.floaty{display:none}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="floaty" id="floaty" aria-hidden="true"></div>
+<canvas id="confetti"></canvas>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">💍 6 years of us</span>
+    <div class="hero-pics">
+      <img src="photos/us/p4.jpg" alt="Us at the amusement park">
+      <img src="photos/us/p6.jpg" alt="Our selfie">
+      <img src="photos/us/p1.jpg" alt="The ring">
+    </div>
+    <h1>Hey <em>Krishna</em>,<br>I have a question.</h1>
+    <p class="sub">Six years of putting up with me. That deserves sushi, dimsum, momos and one very handsome man as your date. 😌</p>
+    <p class="q">Will you go on a date with me tomorrow?</p>
+    <div class="choices">
+      <button class="btn btn-yes" id="yes">Yes, obviously 💖</button>
+      <button class="btn btn-no" id="no">No</button>
+    </div>
+    <p class="nope" id="nope"></p>
+    <p class="scroll-hint">or scroll down first, I wrote you something ↓</p>
+  </div>
+</section>
+
+<section class="letter-sec">
+  <div class="wrap">
+    <div class="letter">
+      <div class="stamp"><div><b>6</b>YEARS<br>& COUNTING</div></div>
+      <h2>Dear Krishna,</h2>
+      <p>Six years. Honestly I still can't believe it.</p>
+      <p>When you came into my life I was so immature (okay, very immature, I know you're nodding right now). But you never gave up on me.</p>
+      <p>Every difficult situation, every tough time, you were right there next to me. You guided me, you calmed me down, and that positive energy of yours somehow made everything feel okay. You made the hard days easier and the good days so much better.</p>
+      <p>And now I get to proudly call you <span class="big">MY WIFE</span>. I'm telling you, that feeling is the best feeling ever.</p>
+      <p>Thank you for being you. Happy anniversary, my love. Now let me take you out and feed you something nice 🍣🥟</p>
+      <p class="sign">Yours, always and forever,<br><span class="big">Tarang</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">evidence that</div>
+      <h2 class="t">You're the cutest 📸</h2>
+      <p>A highly scientific collection.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+    <div style="text-align:center;margin-top:20px">
+      <button class="btn btn-yes" id="yes2">Okay okay, YES to the date 💖</button>
+    </div>
+  </div>
+</section>
+
+<section class="picker" id="picker">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">she said yes!! 🎉</div>
+      <h2 class="t"><span class="step">1</span>Pick where I'm taking you</h2>
+      <p>Sushi, dimsum, momos… I did my homework. You choose, I pay. 😎</p>
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <div class="times-wrap">
+      <div class="sec-head">
+        <h2 class="t"><span class="step">2</span>Pick a time</h2>
+        <p>Tomorrow, Friday 6th November</p>
+      </div>
+      <div class="times" id="times"></div>
+      <div class="custom">or pick your own time: <input type="time" id="ctime"></div>
+    </div>
+
+    <div class="times-wrap">
+      <div class="sec-head">
+        <h2 class="t"><span class="step">3</span>Any demands? 👑</h2>
+        <p>Dress code, dessert requests, "you're paying for the cab too"… anything.</p>
+      </div>
+      <textarea id="msg" placeholder="I want extra momos and you have to wear the black shirt…"></textarea>
+    </div>
+
+    <div class="ticket-wrap">
+      <div class="ticket">
+        <div class="top"><b>Date Ticket 🎟️</b><span>Admit 2</span></div>
+        <div class="rows">
+          <div class="row"><span>Couple</span><span>Krishna 💕 Tarang</span></div>
+          <div class="row"><span>Occasion</span><span>6th Anniversary</span></div>
+          <div class="row"><span>Date</span><span>Fri, 6 Nov 2026</span></div>
+          <div class="row"><span>Place</span><span id="tPlace">pick one ☝️</span></div>
+          <div class="row"><span>Time</span><span id="tTime">pick one ☝️</span></div>
+        </div>
+      </div>
+      <div class="send">
+        <button class="btn btn-wa" id="send" disabled>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Send my choice to Tarang
+        </button>
+        <p class="hint" id="hint">Pick a place and a time first 😉</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>made with too much love (and zero sleep) by your husband 💌</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const PHONE = "917862903842";
+const $ = s => document.querySelector(s);
+
+/* floating food + hearts */
+(() => {
+  const em = ["🍣","🥟","💕","🍜","💖","🥢","✨","🍱"], f = $("#floaty");
+  for (let i = 0; i < 16; i++) {
+    const s = document.createElement("span");
+    s.textContent = em[i % em.length];
+    s.style.left = Math.random()*100 + "vw";
+    s.style.animationDuration = 12 + Math.random()*14 + "s";
+    s.style.animationDelay = -Math.random()*20 + "s";
+    s.style.fontSize = 18 + Math.random()*18 + "px";
+    f.appendChild(s);
+  }
+})();
+
+/* gallery */
+const pics = [
+  ["p1","The ring. The yes. The best day 💍"],
+  ["p2","Food critic mode: ON 🌯"],
+  ["p3","That smile though 🥹"],
+  ["p4","Us, pretending we're not scared of rides"],
+  ["p5","Waiting for food like it's meditation 🧘‍♀️"],
+  ["p6","My favourite human"],
+  ["p7","When the dessert is bigger than your face"],
+  ["p8","Model? No, my wife. 💅"],
+  ["p9","Main character energy 🌿"]
+];
+$("#gallery").innerHTML = pics.map(([f,c]) =>
+  `<figure class="pol"><img src="photos/us/${f}.jpg" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`).join("");
+
+/* restaurants */
+const R = [
+  {id:"ever", name:"The Ever House", area:"Thaltej", price:"₹1300 for two", tags:["Italian","Coffee","Desserts"], note:"Cozy, pretty and very 'take a photo of me here' 📸", imgs:2},
+  {id:"shaka", name:"The Shaka Cafe", area:"Prahlad Nagar", price:"₹1200 for two", tags:["Japanese","Sushi","Asian"], note:"Crispy tempura sushi. Need I say more? 🍣", imgs:2, fav:"🍣 Sushi"},
+  {id:"itameshi", name:"Itameshi", area:"Sindhu Bhavan Road, Thaltej", price:"₹1900 for two", tags:["Japanese","Italian","Rooftop"], note:"Japanese meets Italian. Like us, but with pasta 🍝", imgs:2, fav:"🍣 Sushi"},
+  {id:"youme", name:"YouMe", area:"Palladium Mall", price:"Pan Asian", tags:["Dimsum","Sushi","Mall date"], note:"Literally named after us. You + Me 🥟", art:"🥢", artNote:"you + me = dimsum", fav:"🥟 Dimsum"},
+  {id:"burma", name:"Burma Burma", area:"Palladium Mall, Thaltej", price:"₹2300 for two", tags:["Burmese","Khow Suey","Bubble tea"], note:"Khow suey, tea leaf salad and that tea menu 🍵", imgs:2},
+  {id:"tapa", name:"Tapa Toro", area:"Bodakdev", price:"₹2600 for two", tags:["Tapas","Mexican","Fusion"], note:"Small plates so you can steal from mine guilt free", imgs:2},
+  {id:"bento", name:"Bento B", area:"Project One42, Bopal", price:"Japanese", tags:["Ramen","Sushi","Bento"], note:"Ramen bowls the size of your face 🍜", imgs:1, fav:"🍜 Ramen"},
+  {id:"timtim", name:"Tim Tim", area:"Bodakdev", price:"₹1800 for two", tags:["Japanese","Chinese","Dimsum"], note:"Asian comfort food heaven 🥢", imgs:2, fav:"🥟 Dimsum"},
+  {id:"klatsch", name:"Klatsch Mate", area:"Motera, Chandkheda", price:"₹1500 for two", tags:["Continental","Georgian"], note:"A little long drive, a lot of good food 🚗", imgs:2},
+  {id:"latin", name:"The Latin House", area:"Bodakdev", price:"₹2100 for two", tags:["Mexican","Italian","Vibes"], note:"Tacos, nachos and bohemian vibes 🌮", imgs:2},
+  {id:"ditya", name:"Ditya Momos", area:"Ahmedabad", price:"Momos", tags:["Momos","Street style","Spicy chutney"], note:"No fancy stuff, just us and a plate of momos 🥟❤️", art:"🥟", artNote:"momos > everything", fav:"🥟 Momos"}
+];
+$("#grid").innerHTML = R.map(r => {
+  const ph = r.art
+    ? `<div class="ph art">${r.art}<small>${r.artNote}</small></div>`
+    : `<div class="ph">${Array.from({length:r.imgs},(_,i)=>`<img src="photos/food/${r.id}${i+1}.jpg" alt="${r.name}" loading="lazy">`).join("")}</div>`;
+  return `<button class="card" data-id="${r.id}">
+    ${r.fav ? `<span class="fav">${r.fav}</span>` : ""}
+    ${ph}
+    <div class="cbody"><h3>${r.name}</h3>
+      <div class="meta">📍 ${r.area} · ${r.price}</div>
+      <div class="tags">${r.tags.map(t=>`<span>${t}</span>`).join("")}</div>
+      <div class="note">${r.note}</div></div></button>`;
+}).join("");
+
+const T = [["12:30 PM","Lunch date"],["1:30 PM","Lazy lunch"],["7:00 PM","Sunset dinner"],["8:00 PM","Classic dinner"],["9:00 PM","Late night date"]];
+$("#times").innerHTML = T.map(([t,s]) => `<button class="chip" data-t="${t}">${t}<small>${s}</small></button>`).join("");
+
+const state = {place:null, time:null};
+function refresh(){
+  $("#tPlace").textContent = state.place ? state.place.name : "pick one ☝️";
+  $("#tTime").textContent = state.time || "pick one ☝️";
+  const ok = state.place && state.time;
+  $("#send").disabled = !ok;
+  $("#hint").textContent = ok ? "This opens WhatsApp with your choice ready. Just hit send 💚" : "Pick a place and a time first 😉";
+}
+$("#grid").addEventListener("click", e => {
+  const c = e.target.closest(".card"); if (!c) return;
+  document.querySelectorAll(".card").forEach(x => x.classList.toggle("sel", x === c));
+  state.place = R.find(r => r.id === c.dataset.id);
+  refresh(); toast(`${state.place.name}? Great choice, my love 😍`);
+  setTimeout(()=>$(".times-wrap").scrollIntoView({behavior:"smooth",block:"start"}), 500);
+});
+$("#times").addEventListener("click", e => {
+  const c = e.target.closest(".chip"); if (!c) return;
+  document.querySelectorAll(".chip").forEach(x => x.classList.toggle("sel", x === c));
+  $("#ctime").value = ""; state.time = c.dataset.t; refresh();
+});
+$("#ctime").addEventListener("input", e => {
+  const v = e.target.value; if (!v) return;
+  let [h,m] = v.split(":").map(Number); const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12;
+  document.querySelectorAll(".chip").forEach(x => x.classList.remove("sel"));
+  state.time = `${h}:${String(m).padStart(2,"0")} ${ap}`; refresh();
+});
+$("#send").addEventListener("click", () => {
+  const note = $("#msg").value.trim();
+  const text =
+`Hey husband 💕 Date accepted!
+
+📍 Place: ${state.place.name} (${state.place.area})
+🕖 Time: ${state.time}, Friday 6 Nov
+${note ? `👑 My demands: ${note}\n` : ""}
+Happy 6th anniversary 🥂 See you tomorrow!
+Krishna`;
+  boom();
+  window.location.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+});
+
+/* the very cooperative NO button */
+const noLines = ["Are you sure? 🥺","Krishna please…","I'll get you extra momos 🥟","Wrong button, try the pink one","Even the button doesn't want you to say no 😂","Okay this is getting embarrassing","Sushi. Unlimited. Think about it 🍣","The NO button has left the chat"];
+let noCount = 0;
+function dodge(e){
+  if (e) e.preventDefault();
+  const b = $("#no");
+  if (!b.classList.contains("runaway")) {
+    const r = b.getBoundingClientRect();
+    b.style.left = r.left + "px"; b.style.top = r.top + "px";
+    b.classList.add("runaway");
+  }
+  const pad = 16, w = b.offsetWidth, h = b.offsetHeight;
+  b.style.left = pad + Math.random()*(innerWidth - w - pad*2) + "px";
+  b.style.top = pad + Math.random()*(innerHeight - h - pad*2) + "px";
+  $("#nope").textContent = noLines[noCount % noLines.length];
+  noCount++;
+  const y = $("#yes"); y.style.transform = `scale(${Math.min(1 + noCount*0.12, 1.9)})`;
+  if (noCount >= noLines.length) { b.style.display = "none"; }
+}
+$("#no").addEventListener("mouseenter", () => dodge());
+$("#no").addEventListener("touchstart", dodge, {passive:false});
+$("#no").addEventListener("click", dodge);
+
+function sayYes(){
+  $("#no").style.display = "none";
+  $("#nope").textContent = "Best answer ever. I knew it 😘";
+  $("#yes").style.transform = "";
+  $("#picker").classList.add("show");
+  boom();
+  setTimeout(()=>$("#picker").scrollIntoView({behavior:"smooth"}), 650);
+}
+$("#yes").addEventListener("click", sayYes);
+$("#yes2").addEventListener("click", sayYes);
+
+/* toast */
+let tt; function toast(m){ const t=$("#toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),2200); }
+
+/* confetti */
+const cv = $("#confetti"), cx = cv.getContext("2d"); let parts = [], raf;
+function size(){ cv.width = innerWidth*devicePixelRatio; cv.height = innerHeight*devicePixelRatio; cx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0); }
+size(); addEventListener("resize", size);
+function boom(){
+  const em = ["💖","💕","🍣","🥟","✨","🎉"];
+  for (let i = 0; i < 90; i++) parts.push({x:innerWidth/2,y:innerHeight*0.55,vx:(Math.random()-.5)*14,vy:-Math.random()*15-5,r:Math.random()*6.28,vr:(Math.random()-.5)*.3,e:em[i%em.length],s:16+Math.random()*16,l:0});
+  cancelAnimationFrame(raf); tick();
+}
+function tick(){
+  cx.clearRect(0,0,innerWidth,innerHeight);
+  parts = parts.filter(p => p.l < 160 && p.y < innerHeight + 40);
+  for (const p of parts){ p.vy += .35; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr; p.l++;
+    cx.save(); cx.translate(p.x,p.y); cx.rotate(p.r); cx.font = p.s+"px serif"; cx.fillText(p.e,-p.s/2,p.s/2); cx.restore(); }
+  if (parts.length) raf = requestAnimationFrame(tick); else cx.clearRect(0,0,innerWidth,innerHeight);
+}
+refresh();
+</script>
+</body>
+</html>
